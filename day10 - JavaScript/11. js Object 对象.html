@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        // create 1st object
+        var obj01 = new Object()
+        obj01.name = "Xilong"
+        obj01.age = 28
+        console.log(obj01, typeof obj01)
+
+        // create 2nd object
+        var obj02 = {name:"Xilong", age:28}
+        console.log(obj02, typeof obj02)
+
+        // access object
+        var obj03 = {"app01":"momo", "app02":"tictok"}
+        console.log(obj03.app01)
+        console.log(obj03["app02"])
+
+        // 遍历所有属性
+        for (var k in obj03) {
+            console.log(k, obj03[k])
+        }
+
+        // 序列号与反序列化
+        var res = '[{"title": "西游记", "price": 100}, {"title": "红楼梦", "price": 200}, {"title": "三国传", "price": 300}, {"title": "水浒转", "price": 400}]'
+        var msg_body = JSON.parse(res)
+        console.log(msg_body)
+        for (var msg_k in msg_body) {
+            book = msg_body[msg_k]
+            console.log(book.title, book.price)
+        }
+        // 序列化
+        console.log(JSON.stringify(obj03))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

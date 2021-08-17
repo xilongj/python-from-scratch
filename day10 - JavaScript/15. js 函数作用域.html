@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        x = 100
+        function app01(){
+            var x = 10  // 声明局部变量
+            // x = 10  // 声明全局变量
+        }
+        function app02(){
+            // var x = 1  // 声明局部变量
+            console.log(x);
+        }
+        app01()
+        app02()
+
+
+
+        function app03(){
+            y = 10  // 声明全局变量
+        }
+        function app04(){
+            var y = 1  // 声明局部变量
+            y = 2
+            console.log(y);
+        }
+        app03()
+        app04()
+        console.log(y)
+    </script>
+</head>
+<body>
+</body>
+</html>

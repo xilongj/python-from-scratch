@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<button class="btnAdd">Upload</button>
+<button class="btnDel">Delete</button>
+<button class="btnRep">Replace</button>
+<div class="box">
+    <h3>Hello World.</h3>
+</div>
+<script>
+    var ele1 = document.querySelector('.btnAdd');
+    var ele2 = document.querySelector('.btnDel');
+    var ele3 = document.querySelector('.btnRep');
+    var box = document.querySelector('.box');
+    ele1.onclick = function (){
+        // 创建img节点对象
+        var img = document.createElement('img')
+        img.src = 'imgs/100268735.jpg'
+        console.log(img)
+
+        // 添加节点到指定位置, 父节点.appendChild(新子节点对象)
+        box.appendChild(img);
+    }
+    ele2.onclick = function (){
+        var delDom = document.querySelector('.box h3')
+        box.removeChild(delDom);
+    }
+    ele3.onclick = function (){
+        var img = document.createElement('img')
+        img.src = 'imgs/100268735.jpg'
+        var delDom = document.querySelector('.box h3')
+        box.replaceChild(img, delDom)
+    }
+</script>
+</body>
+</html>

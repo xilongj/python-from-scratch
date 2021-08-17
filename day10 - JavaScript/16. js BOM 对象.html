@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM - Browser Object Model</title>
+    <script>
+        // ------------------------------ Window 对象
+        // window.alert('Hello World')
+        // alert('Warning')
+        // var val = window.confirm("是否继续")
+        // console.log('Value:', val)
+
+        // var num = window.prompt('请输入一个数字:')
+        // console.log(num)
+
+
+        // ------------------------------ Open 与 Close 方法
+        // var val = window.confirm("是否打开新窗口")
+        // if(val){
+        //     window.open('https://www.google.com', '_blank', 'width=800px, height=500px, left=200px, top=200px')
+        // }else {
+        //     window.close()
+        // }
+
+        // 定时器
+
+        // 循环定时器
+        // function foo(){
+        //     console.log('Hello World')
+        // }
+        // var id = window.setInterval(foo,1000)
+        // console.log(id)
+        // window.clearInterval(id)
+
+        // 单次定时器
+        function bar(){
+            console.log('Hello Bar.')
+        }
+        var ID = window.setTimeout(bar, 1000)
+        console.log(ID)
+        window.clearTimeout(ID)
+    </script>
+</head>
+<body>
+</body>
+</html>

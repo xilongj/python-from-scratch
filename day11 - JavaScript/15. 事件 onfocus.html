@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<input type="text" class="c1">
+<script>
+    var ele1 = document.querySelector('.c1')
+    ele1.onfocus = function (){
+        console.log('In')
+    }
+    ele1.onblur = function (){
+        console.log('Out')
+    }
+</script>
+
+</body>
+</html>

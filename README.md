@@ -1,2 +1,5 @@
 # python-from-scratch
-Python from Scratch
+```html
+Xilong Jin
+xilongus@gmail.com
+```

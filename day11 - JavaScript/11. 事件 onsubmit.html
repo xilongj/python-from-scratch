@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        window.onload = function () {
+            var form = document.querySelector('.form')
+            form.onsubmit = function (event) {
+                var current_username = document.querySelector('.form .current_username');
+                var current_password = document.querySelector('.form .current_password');
+                console.log(current_username.value)
+                console.log(current_password.value)
+                if (current_password.value.length < 5) {
+                    // return false
+                    event.preventDefault()
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post" class="form">
+    Username: <input type="text" class="current_username">
+    Password: <input type="password" class="current_password">
+    <input type="submit">
+</form>
+
+</body>
+</html>

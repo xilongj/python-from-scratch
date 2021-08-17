@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<div>
+    Username: <input type="text" class="c1">
+</div>
+<script>
+    var ele1 = document.querySelector('.c1')
+    ele1.onkeydown = function (event) {
+        console.log(event.key)
+        console.log(event.keyCode)
+    }
+</script>
+</body>
+</html>

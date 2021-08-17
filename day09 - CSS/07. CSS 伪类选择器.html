@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+</head>
+<style>
+    a:hover {
+        color: brown;
+    }
+
+    a:active {
+        color: blue;
+    }
+
+    a:link {
+        color: green;
+    }
+
+    a:visited {
+        color: gold;
+    }
+    .c1:after {
+        display: block;
+        content: 'xilongj';
+        color: red;
+    }
+</style>
+<body>
+<a href="https://cn.bing.com">Microsoft Bing</a>
+</body>
+<div class="c1">
+    <div class="c2">
+        Microsoft Bing is a web search engine owned and operated by Microsoft.
+    </div>
+</div>
+</html>

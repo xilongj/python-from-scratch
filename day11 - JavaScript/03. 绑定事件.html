@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+<div id="i1">i1</div>
+<div class="c1">c1</div>
+<div class="c1">c1</div>
+<div class="c1">c1</div>
+<p class="c2">p标签</p>
+<p>p标签</p>
+<ul>
+    <li>AAA</li>
+    <li>BBB</li>
+    <li>CCC</li>
+    <li>DDD</li>
+    <li>EEE</li>
+</ul>
+<script>
+    var ele = document.querySelector('p.c2')
+    ele.onclick = function (){
+        this.style.color = 'red';
+    }
+    // 循环绑定
+    var lis = document.querySelectorAll('ul li')
+    for(var i=0; i<lis.length;i++){
+        lis[i].onclick = function (){
+            var childs = this.parentElement.children
+            for (var j=0; j<childs.length;j++){
+                childs[j].style.color = 'black';
+            }
+            this.style.color = 'red';
+        }
+    }
+</script>
+
+</body>
+</html>

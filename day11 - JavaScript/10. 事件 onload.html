@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<!--<div class="c1">Hello World</div>-->
+<!--<script>-->
+<!--    var ele = document.querySelector('.c1')-->
+<!--    ele.ondblclick = function (){-->
+<!--        this.style.color = 'white';-->
+<!--        this.style.backgroundColor = 'black';-->
+<!--        this.style.fontSize = '20px';-->
+<!--        this.style.textAlign = 'center';-->
+<!--        this.style.padding = '20px'-->
+<!--    }-->
+
+<!--onload解决加载顺序问题-->
+<script>
+    window.onload = function (){
+        var ele = document.querySelector('.c1')
+        ele.ondblclick = function (){
+            this.style.color = 'white';
+            this.style.backgroundColor = 'black';
+            this.style.fontSize = '20px';
+            this.style.textAlign = 'center';
+            this.style.padding = '20px'
+        }
+    }
+</script>
+
+<div class="c1">Hello World</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <script>
+        function show(){
+            // 获取时间字符串
+            var now = new Date();
+            console.log(now.toLocaleString());
+            // 查找input标签对象
+            var ele = document.getElementById('i1');
+            console.log(ele)
+            // 将时间字符串赋值给input标签的Value属性
+            ele.value = now.toLocaleString()
+        }
+        var ID
+        function start(){
+            if (ID === undefined){
+                // 设置定时器, 每隔一秒钟执行一次show函数
+                show()
+                ID = setInterval(show, 1000)
+            }
+        }
+        function stop(){
+            // 取消定时器
+            clearInterval(ID)
+            ID = undefined
+        }
+    </script>
+</head>
+<style>
+    div{
+        text-align: center;
+        padding: 200px;
+        background-color: black;
+    }
+</style>
+<body>
+<div>
+    <input type="text" id="i1" value="">
+    <input type="button" value="Start" onclick=start()>
+    <input type="button" value="Stop" onclick=stop()>
+</div>
+</body>
+</html>

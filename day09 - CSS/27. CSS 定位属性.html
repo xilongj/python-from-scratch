@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mySite</title>
+</head>
+<style>
+    * {
+        margin: unset;
+        text-align: center;
+        line-height: 200px;
+        font-size: large;
+    }
+    .c1 {
+        width: 200px;
+        height: 200px;
+        background-color: #ee00ff;
+    }
+    .c2 {
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+        /*!*相对定位没有脱离文档流; 参考位置是源物理位置*!*/
+        /*position: relative;*/
+        /*left: 200px;*/
+        /*top: 200px;*/
+        /*完全脱离文档流; 参考位置是已定位父级标签;*/
+        position: absolute;
+        left: 200px;
+        top: 200px;
+
+    }
+    .c3 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+    .father {
+        /*border: 0.01px solid greenyellow;*/
+        position: relative;
+    }
+</style>
+<body>
+<div class="c1">box01</div>
+<div class="father">
+    <div class="c2">box02</div>
+</div>
+<div class="c3">box03</div>
+</body>
+</html>

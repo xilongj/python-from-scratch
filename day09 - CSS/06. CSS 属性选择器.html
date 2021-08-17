@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<style>
+    /*属性选择器*/
+    [type = 'text'] {
+        border: 1px red solid;
+    }
+
+    [class = 'c1'] {
+        color: greenyellow;
+    }
+    div[name = 'xlnx'] {
+        color: greenyellow;
+        background-color: black;
+        display: inline;
+    }
+    [href$=png] {
+        color: greenyellow;
+        background-color: green;
+    }
+</style>
+<body>
+<!--属性选择器-->
+<p>
+    username <input type="text">
+</p>
+<p>
+    password <input type="password">
+</p>
+<p class="c1">
+    confirm <input type="password">
+</p>
+<p name = 'xlnx'>
+    Adaptable Intelligence
+</p>
+<div name = 'xlnx'>
+    Xilinx Technology Beijing Limited.
+</div>
+<!--正则-->
+<ul>
+    <li><a href="imgs/iPad-mini.jpg">iPad Mini</a></li>
+    <li><a href="iPhone-11-Max.png">iPhone 11 Max</a></li>
+    <li><a href="imgs/iPad-Pro.jpg">iPad Pro</a></li>
+    <li><a href="iPhone-12.png">iPhone 12</a></li>
+    <li><a href="iPhone-SE-2.png">iPhone SE 2</a></li>
+</ul>
+</body>
+</html>

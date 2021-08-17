@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<style>
+    /*选择器优先级*/
+    /*行内式: 1000*/
+    /*id 选择器: 100*/
+    /*class 选择器: 10*/
+    /*标签选择器: 1*/
+    /*-----------------比较案例一----------------*/
+    /*div {*/
+    /*    color: red;*/
+    /*}*/
+    /*#i1 {*/
+    /*    color: green;*/
+    /*}*/
+    /*.c1 {*/
+    /*    color: blue;*/
+    /*}*/
+    /*-----------------比较案例二----------------*/
+    .c5 {
+        color: rebeccapurple;
+    }
+    .c2 .c4 span{
+        color: red;
+    }
+    .c2.c5 {
+        color: green;
+    }
+    span {
+        color: gold!important;
+    }
+</style>
+<body>
+<div class="c1" id="i1">
+    Hello World.
+</div>
+<div class="c2">
+    <div class="c3">
+        <div class="c4">
+            <span class="c5" id = 'i2'>
+                Adaptable Intelligence
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

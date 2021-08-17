@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<style>
+    /*普通选择器*/
+    .c2 ~ div {
+        color: darkorchid;
+    }
+    /*毗邻选择器*/
+    .c2 + div {
+        background-color: green;
+        color: white;
+        display: inline;
+    }
+</style>
+<body>
+<div class="c1">AAA</div>
+<div class="c2">BBB</div>
+<div class="c3">CCC</div>
+<div class="c4">DDD</div>
+<p class="c6">PPP</p>
+<div class="c5">EEE</div>
+</body>
+</html>

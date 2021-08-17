@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        // console.log(2 == '2')
+        // parseInt  将数据转换成整数
+        var box_a = "总共100件";
+        var box_b = "100件";
+        var res_a = parseInt(box_a);
+        var res_b = parseInt(box_b);
+        console.log(res_a, typeof res_a);
+        console.log(res_b, typeof res_b);
+        // parseFloat 将数据转换成小数
+        var box_c = '3.1415926'
+        var res_c = parseFloat(box_c)
+        console.log(res_c)
+        // Number 将数据转换成数值
+        var res_d = Number(box_c)
+        console.log(res_d)
+        // 将对象转换成字符串
+        var num = 2021
+        console.log(num.toString(), typeof num.toString())
+        // 零值: 字符串的零值是"", number类型零值就是0
+        var box5 = "";
+        console.log(Boolean(box5));
+        var box6 = -1;
+        console.log(Boolean(box6));
+        var box7 = 0;
+        console.log(Boolean(box7));
+        var box8 = "false"
+        console.log(Boolean(box8));
+        var box9 = [];
+        console.log(box9);
+        box10 = {};
+        console.log(box10);
+        var box11 = '0';
+        console.log(box11)
+        var box12 = null;
+        console.log(Boolean(box12));
+        var box13 = undefined;
+        console.log(Boolean(box13));
+        // 面试题
+        var box_x = 1 + "200";  // 1200
+        console.log(box_x);
+        var box_y = 1 - "200";  // -199
+        console.log(box_y)
+    </script>
+</head>
+<body>
+</body>
+</html>

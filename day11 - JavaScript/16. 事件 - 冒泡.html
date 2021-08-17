@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<style>
+    .c1 {
+        width: 400px;
+        height: 400px;
+        background-color: #8d31c8;
+    }
+    .c2 {
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+    }
+</style>
+<body>
+<div class="c1">
+    <div class="c2"></div>
+</div>
+<script>
+    var ele1 = document.querySelector('.c1')
+    var ele2 = document.querySelector('.c2')
+    ele1.onclick = function () {
+        alert('c1 Zone')
+    }
+    ele2.onclick = function (event) {
+        alert('c2 Zone')
+        // 阻止冒泡事件
+        event.stopPropagation()
+    }
+</script>
+</body>
+</html>

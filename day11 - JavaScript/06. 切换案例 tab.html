@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Document Object Model</title>
+    <style>
+        .tab {
+            width: 800px;
+            height: 600px;
+            /*border: 1px solid red;*/
+            margin: 100px auto;
+        }
+
+        .tab ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tab ul.title {
+            border-bottom: 1px solid #e4393c;
+        }
+
+        .tab ul.title li {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            background-color: #ffffff;
+        }
+
+        .tab ul.title li.current {
+            background-color: #e4393c;
+            color: #ffffff;
+            cursor: hand;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <ul class="title">
+        <li class="current" title_index="0">商品介绍</li>
+        <li title_index="1">规格包装</li>
+        <li title_index="2">售后保障</li>
+        <li title_index="3">商品评价</li>
+    </ul>
+    <ul class="content">
+        <li>商品介绍内容</li>
+        <li class="hide">规格包装内容</li>
+        <li class="hide">售后保障内容</li>
+        <li class="hide">商品评价内容</li>
+    </ul>
+</div>
+<script>
+    // 查找Title标签
+    var title_eles = document.querySelectorAll('.title li')
+    var content_eles = document.querySelectorAll('.content li')
+
+    // 循环绑定事件
+    for (var i = 0; i < title_eles.length; i++) {
+        title_eles[i].onclick = function () {
+            // 初始化清除所有li的current样式
+            for (var j = 0; j < title_eles.length; j++) {
+                title_eles[j].classList.remove('current')
+            }
+            // 1. 单击标签显示默认样式
+            this.classList.add('current');
+
+            // 2. 显示title索引对应内容
+            // 初始化清除操作
+            for (var z = 0; z < content_eles.length; z++) {
+                content_eles[z].classList.add('hide')
+            }
+            var index = this.getAttribute('title_index')
+            content_eles[index].classList.remove('hide')
+        }
+    }
+</script>
+</body>
+</html>

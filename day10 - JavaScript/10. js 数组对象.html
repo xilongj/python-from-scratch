@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        var arr01 = ['xilongj', true, 2021]
+        var arr02 = new Array('xilongj', true, 2021)
+        console.log(arr01, typeof arr01)
+        console.log(arr02, typeof arr02)
+
+        // 内置属性
+        console.log(arr01.length)
+        console.log(arr02.length)
+
+        // 索引操作
+        console.log(arr01[0])
+        console.log(arr01[1])
+        console.log(arr01[2])
+
+        // 内置方法
+        var arr03 = [1,2,3,4]
+        arr03.push(5)
+        console.log(arr03)
+
+        arr03.pop()
+        console.log(arr03)
+
+        // shift 将数组中一个元素删除
+        var arr04 = ['xilongj','yufengc','wonchint','xlnx']
+        arr04.shift()
+        console.log(arr04)
+        arr04.unshift('uname')
+        console.log(arr04)
+
+        // reverse 方法
+        var arr05 = ['name', 'age', 'passwd', 'email']
+        arr05.reverse()
+        console.log(arr05)
+
+        // sort 排序
+        var arr06 = [29, 34, 22, 17, 16, 200]
+        arr06.sort()
+        console.log(arr06)
+
+        arr06.sort(function (a, b) {
+            return a - b
+        })
+        console.log(arr06)
+
+        // splice 方法
+        var arr07 = [8, 34, 22, 17, 29]
+        arr07.splice(2,2) //删除
+        console.log(arr07)
+
+        var arr08 = [1, 2, 100]
+        arr08.splice(1, 0, 21,22)
+        console.log(arr08)
+
+        // concat 合成
+        var arr09 = ['a1', 'b1', 'c1']
+        var arr10 = ['a2', 'b2', 'c2']
+        var arr11 = arr09.concat(arr10)
+        console.log(arr11)
+
+        // join 合成
+        var arr12 = ['Shenzhen', 'Beijing', 'Shanghai']
+        var arr_j = arr12.join('*')
+        console.log(arr_j)
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

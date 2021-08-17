@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+<input type="text" value="admin" id="i1">
+<button>reset</button>
+
+<div>
+    <select name="" id="i2">
+        <option value="xbj">Beijing</option>
+        <option value="xsh">Shanghai</option>
+        <option value="xsz">Shenzhen</option>
+        <option value="xhz">Hangzhou</option>
+    </select>
+    <button class="btn2">Show</button>
+</div>
+
+<div>
+    <textarea name="" id="i3" cols="30" rows="10">Hello World</textarea>
+    <button class="btn3">textarea</button>
+</div>
+
+<script>
+    // input 标签
+    var ele = document.querySelector('#i1')
+    console.log(ele.value)
+    var btn = document.querySelector('button')
+    btn.onclick = function (){
+        ele.value = 'xilongj'
+    }
+
+    // select 标签
+    var btn2 = document.querySelector('.btn2')
+    btn2.onclick = function (){
+        var ele2 = document.querySelector('#i2')
+        // 获取 value
+        console.log(ele2.value)
+        // 赋值 value
+        ele2.value = 'xsh'
+    }
+    var btn3 = document.querySelector('.btn3')
+    btn3.onclick = function (){
+        var ele3 = document.querySelector('#i3')
+        console.log(ele3.value)
+        ele3.value = 'Adaptable Intelligent'
+    }
+
+</script>
+</body>
+</html>

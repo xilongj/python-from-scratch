@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script>
+        // Current Time
+        var now = new Date();
+        console.log(now, typeof now)
+        console.log(now.toLocaleString())
+
+        // Define Time
+        var date = new Date("2020-12-10 11:12")
+        console.log(date.toLocaleString())
+
+        console.log(date.getFullYear())
+        console.log(date.getMonth() + 1)
+
+        console.log(now.getFullYear())
+        console.log(now.getMonth() + 1)
+
+        // 通过时间戳生成对象
+        var date2 = new Date(5000);
+        console.log(date2.toLocaleString());
+        console.log(date2.toUTCString());
+
+        console.log(now.getDay())
+
+        // 以2021年03月2日 14:1:43 星期二 格式化输出时间
+        function getCurrentDate(){
+            // 创建Date对象
+            var date = new Date();
+            // 获取当前年份
+            var year = date.getFullYear();
+            // 获取当前月份
+            var month = date.getMonth() + 1;
+            // 获取当前日
+            var day = date.getDate();
+            // 获取当前小时
+            var hour = date.getHours();
+            // 获取当前分钟
+            var min = date.getMinutes();
+            // 获取当前秒
+            var sec = date.getSeconds();
+            // 获取当前星期
+            var week = date.getDay();
+            return year + "年" + changeNum(month) + "月" + day + "日" + hour + ":" + min + ":" + sec + " " + parseWeek(week);
+        }
+        function changeNum(num){
+            if (num < 10) {
+                return "0" + num;
+            }else {
+                return num;
+            }
+        }
+        function parseWeek(week){
+            var arr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            return arr[week];
+        }
+        console.log(getCurrentDate());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

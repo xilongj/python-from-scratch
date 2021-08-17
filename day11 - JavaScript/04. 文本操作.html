@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+<ul>
+    <li>Beijing</li>
+    <li>Shanghai</li>
+    <li>Shenzhen</li>
+    <li>Xuzhou</li>
+    <li>Hangzhou</li>
+</ul>
+<script>
+    var lis = document.querySelectorAll('ul li')
+    for (var i=0; i<lis.length; i++){
+        lis[i].onclick = function (){
+            // console.log(this.innerHTML)
+            // console.log(this.innerText)
+
+            // 赋值操作
+            // this.innerHTML = 'XBJ'
+
+            // 操作区别
+            this.innerHTML = '<span>XBJ</span>'
+            // this.innerText = '<span>XBJ</span>'
+        }
+    }
+</script>
+</body>
+</html>

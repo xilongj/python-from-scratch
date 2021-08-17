@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<select name="" id="city">
+    <option value="">请选择城市</option>
+    <option value="beijing">北京市</option>
+    <option value="shanghai">上海市</option>
+    <option value="xuzhou">徐州市</option>
+    <option value="shenzhen">深圳市</option>
+</select>
+<select name="" id="zone">
+    <option value="">请选择区域</option>
+</select>
+<script>
+    var city_zones = {beijing:['朝阳区', '西城区', '海淀区'],
+        shanghai:['徐汇区', '宝山区', '黄浦区'],
+        xuzhou:['云龙区', '鼓楼区', '泉山区'],
+        shenzhen:['罗湖区', '龙华区', '松岗区']
+    }
+    var city = document.querySelector('#city');
+    var zone = document.querySelector('#zone');
+    city.onchange = function () {
+        var city_val = city.value
+        var zone_list = city_zones[city_val]
+        console.log(city_val)
+        console.log(zone_list)
+
+        // 清空操作
+        zone.options.length = 1
+
+        for (var i=0; i<zone_list.length;i++){
+            var option = document.createElement('option');
+            option.innerHTML = zone_list[i];
+
+            // 添加节点
+            zone.appendChild(option);
+        }
+    }
+</script>
+</body>
+</html>
