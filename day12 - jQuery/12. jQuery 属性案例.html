@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<button class="selectAll">全选</button>
+<button class="cancelAll">取消</button>
+<button class="reverseAll">反选</button>
+<table border="1px">
+    <tr>
+        <th>选择</th>
+        <th>姓名</th>
+        <th>部门</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>张三</td>
+        <td>销售</td>
+    </tr>
+        <tr>
+        <td><input type="checkbox"></td>
+        <td>李四</td>
+        <td>销售</td>
+    </tr>
+        <tr>
+        <td><input type="checkbox"></td>
+        <td>王五</td>
+        <td>销售</td>
+    </tr>
+</table>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.selectAll').click(function (){
+        $('tr :checkbox').prop('checked', true)
+    })
+    $('.cancelAll').click(function (){
+        $('tr :checkbox').prop('checked', false)
+    })
+    $('.reverseAll').click(function (){
+        // $(this).prop('checked', !$(this).prop('checked'))
+        $('tr :checkbox').each(function (){
+            if ($(this).prop('checked')){
+                $(this).prop('checked', false)
+            }else {
+                $(this).prop('checked', true)
+            }
+        })
+    })
+</script>
+</body>
+</html>

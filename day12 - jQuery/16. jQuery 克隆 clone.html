@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite </title>
+</head>
+<body>
+<div class="container">
+    <div class="item">
+        <input type="button" value="+" class="sgl_copy">
+        <input type="text">
+    </div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.sgl_copy').click(function (){
+        // var $item = $('.item').clone()
+        var $item = $(this).parent().clone()
+        $item.children().first().attr({'value':'-','class':'rm'})
+        $('.container').append($item)
+    })
+
+    // 事件委派 on方法
+    $('.container').on('click','.item .rm', function (){
+        $(this).parent().remove()
+    })
+</script>
+</body>
+</html>

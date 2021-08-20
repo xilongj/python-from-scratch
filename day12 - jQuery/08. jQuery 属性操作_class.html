@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .c1 {
+            color: red;
+        }
+        .c2 {
+            background-color: lightblue;
+            display: inline-block;
+        }
+        .c3 {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<div class="c1 c2">Adaptable Intelligence</div>
+<script>
+    // // 单击添加样式
+    // $('div').click(function (){
+    //     $(this).addClass('c3')
+    // })
+    // // 双击消除样式
+    // $('div').dblclick(function (){
+    //     $(this).removeClass('c3')
+    // })
+
+
+    $('div').click(function (){
+        $(this).toggleClass('c3')
+    })
+</script>
+</body>
+</html>

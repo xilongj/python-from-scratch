@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<div>
+    <button class="upt">Update</button>
+</div>
+<ul>
+    <li>Beijing</li>
+    <li>Shanghai</li>
+    <li>Shenzhen</li>
+    <li>Xuzhou</li>
+    <li>Hangzhou</li>
+
+</ul>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $('ul li').click(function (){
+        // this.style.color = 'red'
+        // $(this).css('color', 'red')
+        // 链式操作
+        $(this).css('color', 'red').siblings().css('color', 'black')
+    })
+
+    $('.upt').click(function (){
+        $('ul').append('<li>other city</li>')
+    })
+
+    // 事件委派 on方法
+    $('ul').on('click','li',function (){
+        $(this).css('color', 'red').siblings().css('color', 'black')
+    })
+
+    // 取消委派
+    // $('ul').off('click')
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h4>US News Rankings</h4>
+<ul>
+    <li>1: Education</li>
+    <li>2: Health</li>
+    <li>3: Cars</li>
+    <li>4: Money</li>
+    <li>5: Travel</li>
+    <li>6: Real Estate</li>
+    <li>7: Law Firms</li>
+    <li>8: Governance</li>
+</ul>
+<script>
+    // 筛选器
+    // $('ul li').css('color', 'red')
+    // $('ul li:first').css('color', 'red')
+    // $('ul li:last').css('color', 'red')
+    // $('ul li:even').css('color', 'red')
+    // $('ul li:odd').css('color', 'red')
+    // $('ul li:eq(3)').css('color', 'red')
+    // $('ul li:gt(2)').css('color', 'red')
+    // $('ul li:lt(3)').css('color', 'red')
+
+    // 进阶筛选器
+    var index = 2
+    $('ul li').first().css('color', 'red')
+    $('ul li').last().css('color', 'red')
+    $('ul li').eq(index).css('color', 'red')
+</script>
+</body>
+</html>

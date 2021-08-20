@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<input type="checkbox" class="c1">
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    console.log($('.c1').attr('checked'))  // undefined
+    console.log($('.c1').prop('checked'))  // false
+    $('.c1').mouseover(function (){
+        $(this).prop('checked', true)
+    })
+</script>
+</body>
+</html>

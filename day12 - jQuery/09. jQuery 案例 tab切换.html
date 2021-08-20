@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Document Object Model</title>
+    <style>
+        .tab {
+            width: 800px;
+            height: 600px;
+            /*border: 1px solid red;*/
+            margin: 100px auto;
+        }
+
+        .tab ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tab ul.title {
+            border-bottom: 1px solid #e4393c;
+        }
+
+        .tab ul.title li {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            background-color: #ffffff;
+        }
+
+        .tab ul.title li.current {
+            background-color: #e4393c;
+            color: #ffffff;
+            cursor: hand;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <ul class="title">
+        <li class="current">商品介绍</li>
+        <li>规格包装</li>
+        <li>售后保障</li>
+        <li>商品评价</li>
+    </ul>
+    <ul class="content">
+        <li>商品介绍内容</li>
+        <li class="hide">规格包装内容</li>
+        <li class="hide">售后保障内容</li>
+        <li class="hide">商品评价内容</li>
+    </ul>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.tab .title li').click(function (){
+        $(this).addClass('current').siblings().removeClass('current')
+        var index = $(this).index()
+        $('.content li').eq(index).removeClass('hide').siblings().addClass('hide')
+    })
+</script>
+</body>
+</html>

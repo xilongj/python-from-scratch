@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h4 class="head">US News Rankings</h4>
+<ul>
+    <li>1: Education</li>
+    <li>2: Health</li>
+    <li>3: Cars</li>
+    <li>4: Money</li>
+    <li>5: Travel</li>
+    <li>6: Real Estate</li>
+    <li>7: Law Firms</li>
+    <li>8: Governance</li>
+</ul>
+<script>
+    $('.head').click(function (){
+        this.style.fontSize = '30px'
+    })
+    $('ul li').click(function (){
+        // 绑定事件
+        // this在事件函数中指代触发事件的DOM标签
+        this.style.color = 'blue'
+        this.style.fontSize = '20px'
+        // $(this).css('fontSize', '25px')
+        // // 突显被选中对象
+        $(this).siblings().css('color', 'black')
+        $(this).siblings().css('fontSize', '14px')
+
+        // 链式操作
+        // $(this).css('color', 'red').siblings().css('color', 'black')
+    })
+</script>
+</body>
+</html>

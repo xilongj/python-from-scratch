@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<input type="text" value="admin" id="i1">
+<button class="btn1">Change</button>
+<div>
+    <select name="" id="i2">
+        <option value="beijing">北京市</option>
+        <option value="shanghai">上海市</option>
+        <option value="hangzhou">杭州市</option>
+        <option value="xuzhou">徐州市</option>
+    </select>
+    <button class="btn2">select</button>
+</div>
+<div>
+    <textarea name="" id="i3" cols="150" rows="20">Hello World.</textarea>
+    <button class="btn3">textarea</button>
+</div>
+<div value="v1" id="i4">Adaptable Intelligence</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.btn1').click(function (){
+        $('#i1').val('xilongj')    // 获取value属性值
+    })
+    $('.btn2').click(function (){
+        $('#i2').val('hangzhou')
+    })
+    $('.btn3').click(function (){
+        $('#i3').val('We are building an Adaptable Intelligent World.')
+    })
+</script>
+</body>
+</html>

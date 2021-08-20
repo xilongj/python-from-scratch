@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div>Xilong</div>
+<div>Satya</div>
+<div>Mark</div>
+<script>
+    $('div').click(function (){
+        // $(this).html()     获取文本
+        // $(this).html('')   文本赋值
+        // $(this).html('Hello World')
+
+        $(this).html('Hello '+$(this).html())
+        // $(this).text('Hello '+$(this).text())
+    })
+</script>
+</body>
+</html>

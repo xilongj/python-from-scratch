@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+Username: <input type="text">
+Password: <input type="password">
+<div>
+    Confirm: <input type="checkbox" checked="checked">
+</div>
+<input type="submit">
+
+<script>
+    // $("[type='text']").css('border', '1px solid red')
+    // 仅针对form表单标签
+    $(":text").css('border', '1px solid red')
+    $(":password").css('border', '1px solid blue')
+    $(":checked").prop('checked', false)
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<ul>
+    <li>AAA</li>
+    <li>BBB</li>
+    <li>CCC</li>
+</ul>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    var arr = [1, 2, 3, 4, 5]
+    $.each(arr, function (i, j){
+        console.log(i, j)
+    })
+
+    var obj = {'name':"yuan",'age':22}
+    $.each(obj, function (i, j){
+        console.log(i, j)
+    })
+
+    // each 实例循环
+    $('ul li').each(function (){
+        // $(this)代指循环
+        if ($(this).html() === 'BBB'){
+            $(this).css('color', 'green')
+        }else {
+            $(this).css('color', 'red')
+        }
+    })
+</script>
+
+</body>
+</html>

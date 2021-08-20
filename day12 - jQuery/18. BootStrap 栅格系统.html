@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <style>
+        [class*='col-md']{
+            border: 2px solid red;
+            color: white;
+            font-size: large;
+            font-family: "Microsoft YaHei";
+            background-color: black;
+        }
+    </style>
+    <!--    https://getbootstrap.com/docs/3.4/css/-->
+</head>
+<body>
+<h3>Grid System</h3>
+<div class="row">
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+</div>
+<div class="row">
+    <div class="col-md-6">col-md6</div>
+    <div class="col-md-6">col-md6</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-3">col-md-sm</div>
+    <div class="col-md-6 col-sm-9">col-md-sm</div>
+</div>
+
+<h4>Grid System - offset</h4>
+<div class="row">
+    <div class="col-md-1">col-md-1</div>
+    <div class="col-md-1">col-md-1</div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2">col-md-offset-2</div>
+</div>
+<h4>Grid System - insert</h4>
+<div class="row">
+    <div class="col-md-6">AAA</div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">xxx</div>
+            <div class="col-md-6">yyy</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

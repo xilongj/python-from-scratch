@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+</head>
+<body>
+<div>
+    <button class="btnUpt">Update</button>
+    <button class="btnDel">Delete</button>
+    <button class="btnRep">Replace</button>
+</div>
+<div class="box">
+    <h3>Hey You.</h3>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    // *** method 1
+    $('.btnUpt').click(function (){
+        var $img = $('<img>');
+        $img.attr('src', 'imgs/100268736.jpg')
+
+        // append
+        $('.box').append($img);
+    })
+
+    // *** method 2
+    // $('.box').append('<img src="imgs/100268736.jpg">')
+    // $('.box').after('<img src="imgs/100268736.jpg">')
+
+    $('.btnDel').click(function (){
+        // $('h3').remove()
+        $('h3').empty()
+        // $('.box').empty()
+    })
+
+    $('.btnRep').click(function (){
+        $('h3').replaceWith('<img src="imgs/100268735.jpg">')
+    })
+</script>
+</body>
+</html>
