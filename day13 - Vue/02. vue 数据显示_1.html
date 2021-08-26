@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{msg}}</div>
+    <h4>{{msg}}</h4>
+    <p>{{msg}}</p>
+    <div>{{uname}}</div>
+    <div>{{passwd}}</div>
+<!--    <input type="text" v-model="msg">-->
+</div>
+
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'Hello World',
+            uname: 'admin',
+            passwd: '123456'
+        }
+    })
+</script>
+</body>
+</html>

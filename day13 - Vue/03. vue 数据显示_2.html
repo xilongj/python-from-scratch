@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{num1}}</div>
+    <div>{{num2}}</div>
+    <div>{{num1+50}}</div>
+    <div>{{num2<num1?num2:num1}}</div>
+    <div>{{str1}}</div>
+    <div>{{str1.split("").reverse().join("")}}</div>
+    <input type="text" v-model="str1">
+</div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            num1: 100,
+            num2: 200,
+            str1: "Hello World",
+        }
+    })
+</script>
+
+</body>
+</html>

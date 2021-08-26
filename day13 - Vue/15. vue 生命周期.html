@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{num}}</p>
+    <input type="text" v-model="num">
+</div>
+<!--created     mounted     updated-->
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data(){
+            return {
+                num: 0,
+            }
+        },
+        beforeCreate(){
+            console.log('----------data数据被赋值到vm对象之前----------------');
+            console.log(this.$data);
+            console.log(this.$el);
+        },
+        created(){
+            console.log('----------data数据被赋值到vm对象之后----------------');
+            console.log(this)
+            console.log(this.$data);
+            console.log(this.$el);
+        },
+        beforeMount(){
+            console.log('----------把data数据渲染到HTML之前----------------');
+            console.log(this.$el);
+            console.log(this.$el.innerHTML);
+        },
+        mounted(){
+            console.log('----------把data数据渲染到HTML之后----------------');
+            console.log(this.num);
+            console.log(this.$el.innerHTML);
+        },
+        updated(){
+            console.log('----data数据发生变化以后,同步到HTML模板之后,此时data和模板中的数据保持一致------');
+            console.log(this.num);
+            console.log(this.$el.innerHTML);
+        }
+    })
+</script>
+</body>
+</html>

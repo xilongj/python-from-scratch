@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input :type="type" v-model="passwd"><button @click="toggle">{{msg}}</button>
+</div>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg: 'Hidden',
+            passwd:'Il0vemyj0b@xlnx',
+            type:'text',
+        },
+        methods:{
+            toggle(){
+                if (this.type == 'text'){
+                    this.type = 'password'    // <input type="password">
+                    this.msg = 'Show'
+                }else {
+                    this.type = 'text'        // <input type="text">
+                    this.msg = 'Hidden'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

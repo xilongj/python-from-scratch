@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+    <style>
+        .c1{
+            color: white;
+            font-size: 20px;
+            font-family: "Microsoft YaHei";
+            font-weight: bolder;
+            text-align: center;
+        }
+        .c2{
+            background-color: black;
+        }
+        .c3{
+            background-color: #2aabd2;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p :class="{c1:isc1,c2:isc2,c3:isc3}">Hello World</p>
+    <p @click="func" :class="{c1:isc1,c2:isc2,c3:isc3}">Adaptable Intelligence</p>
+</div>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            isc1:true,
+            isc2:true,
+            isc3:false,
+        },
+        methods:{
+            func:function (){
+                this.isc1 = true
+                this.isc2 = false
+                this.isc3 = true
+            }
+        }
+    })
+</script>
+</body>
+</html>

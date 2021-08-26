@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+    <style>
+        body{
+            font-size: 14px;
+        }
+        table, tr, th, td{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        th, td{
+            width: 200px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+        input{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <table>
+        <tr>
+            <th>商品序号</th>
+            <th>商品标题</th>
+            <th>商品库存</th>
+            <th>商品单价</th>
+            <th>购买数量</th>
+            <th>商品总计</th>
+        </tr>
+        <tr v-for="book in book_list">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.max_num}}</td>
+            <td>{{book.price}}</td>
+            <td>
+                <button @click="sub(book)">-</button>
+                <input type="text" v-model.number="book.num">
+                <button @click="add(book)">+</button>
+            </td>
+            <td>{{total(book)}}</td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td>价格总计</td>
+            <td>{{calc}}</td>
+        </tr>
+    </table>
+</div>
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data(){
+            return {
+                book_list: [
+                    {id: 10, title:'中信证券', price: 98.50, num: 1, max_num: 100,},
+                    {id: 110, title:'格力电器', price: 68.50, num: 1, max_num: 50,},
+                    {id: 30, title:'元组股份', price: 108.50, num: 1, max_num: 30,},
+                    {id: 100, title:'东港股份', price: 78.50, num: 1, max_num: 20,},
+                ]
+            }
+        },
+        computed:{
+            calc(){
+                let ret=0;
+                this.book_list.forEach((book, key)=>{
+                    ret += book.price * book.num;
+                });
+                return ret.toFixed(2);
+            }
+        },
+        methods:{
+            total(book){
+                return (book.price * book.num).toFixed(2);
+            },
+            sub(book){
+                if (book.num > 1){
+                    book.num -= 1;
+                }
+            },
+            add(book){
+                if (book.num < book.max_num) {
+                    book.num += 1;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
