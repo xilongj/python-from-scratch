@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mySite</title>
+    <script src="vue-2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>搜索天气</h3>
+    <input type="text" placeholder="城市" v-model="city">
+    <button @click="search">搜索</button>
+    <div class="weather" style="border: 1px solid blueviolet">
+        <ul>
+            <li v-for="item in forecast">日期:{{item.date}} 天气类型:{{item.type}} 最高气温:{{item.high}} 最低气温:{{item.low}}</li>
+        </ul>
+    </div>
+    <button @click="getStocks">持仓股票</button>
+    <div class="share" style="border: 1px solid red">
+        <ul>
+            <li v-for="item in shares">股票名称: {{item.name}} 当前价格:{{item.price}}</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            city: '北京',
+            forecast: [],
+            shares: []
+        },
+        created(){
+            window.vue = this
+            axios.get('http://wthrcdn.etouch.cn/weather_mini?city=北京').then(function (res) {
+                this.vue.forecast = res.data.data.forecast;
+            })
+        },
+        methods: {
+            search() {
+                window.vue = this
+                // 发送Ajax请求,获取搜索城市的天气数据
+                // 想服务器发送Ajax请求,获取某个城市的天气信息
+                axios.get('http://wthrcdn.etouch.cn/weather_mini?city=' + this.city).then(function (res) {
+                    console.log('res', res.data.data.forecast);
+                    this.vue.forecast = res.data.data.forecast;
+                })
+            },
+            getStocks(){
+                window.vue = this
+                axios.get('http://127.0.0.1:2021').then(function (res) {
+                    console.log('res', res);
+                    this.vue.shares = res.data;
+                })
+            },
+        }
+    })
+</script>
+</body>
+</html>
